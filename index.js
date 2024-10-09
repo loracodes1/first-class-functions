@@ -23,7 +23,8 @@ const functionObject = {
 console.log(functionObject.func1()); // Output: Hello from func1
 
 
-//FUNCTIONS THAT RETURN OTHER FUNCTIONS
+//FUNCTIONS THAT RETURN OTHER FUNCTIONS 
+//Functions can return other functions, allowing you to create higher-order functions.
 function outerFunction() {
     return function innerFunction() {
         return "I'm the inner function";
