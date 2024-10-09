@@ -22,3 +22,14 @@ const functionObject = {
 
 console.log(functionObject.func1()); // Output: Hello from func1
 
+
+//FUNCTIONS THAT RETURN OTHER FUNCTIONS
+function outerFunction() {
+    return function innerFunction() {
+        return "I'm the inner function";
+    };
+}
+
+const inner = outerFunction();
+console.log(inner()); // Output: I'm the inner function
+
