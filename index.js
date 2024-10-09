@@ -4,7 +4,7 @@ const greet = function(name) {
 };
 console.log(greet("Lora")); // Output: Hello, Lora!
 
-//STORE FUNCTIONS IN DATA STRUCTURES
+//2. STORE FUNCTIONS IN DATA STRUCTURES
 // Storing functions in an array
 const functionArray = [
     function() { return "Function 1"; },
@@ -23,7 +23,7 @@ const functionObject = {
 console.log(functionObject.func1()); // Output: Hello from func1
 
 
-//FUNCTIONS THAT RETURN OTHER FUNCTIONS 
+//3.FUNCTIONS THAT RETURN OTHER FUNCTIONS 
 //Functions can return other functions, allowing you to create higher-order functions.
 function outerFunction() {
     return function innerFunction() {
@@ -33,4 +33,21 @@ function outerFunction() {
 
 const inner = outerFunction();
 console.log(inner()); // Output: I'm the inner function
+
+
+//4. CALL A FUNCTION RETURNED BY ANOTHER FUNCTION
+//You can pass functions as arguments to other functions. These are called callback functions.
+function executeCallback(callback) {
+    console.log("Executing the callback...");
+    callback();
+}
+
+function myCallback() {
+    console.log("This is the callback function.");
+}
+
+executeCallback(myCallback); 
+// Output: 
+// Executing the callback...
+// This is the callback function.
 
